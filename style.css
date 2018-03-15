@@ -1,0 +1,64 @@
+/*
+Theme Name: anthony-aguasin
+Author: Anthony Aguasin
+Version: 1.0
+*/
+body {
+    background-color: seagreen;
+    box-sizing: border-box;
+    height: 100vh;
+    margin: 0;    
+    display: flex;
+    flex-direction: column;
+
+}
+
+h1,h2,h3,h4,p {
+    color: white;
+}
+
+
+
+.menu-main-navigation-container {
+    width: 80%;
+    margin: 0 auto;
+    order: 1;
+    position: absolute;
+    bottom:4rem;
+    left: -6rem;
+}
+
+#menu-main-navigation {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    list-style-type: none;
+    padding: 0;
+
+    position: relative;
+}
+
+#menu-main-navigation li {
+    display: flex;
+    padding: 1rem;
+    width: 100px;
+}
+#menu-main-navigation a {
+    color: white;
+    text-decoration: none;
+}
+
+main {
+    order: -1;
+    width: 100%;
+}
+
+.wp_custom_header {
+    position: relative;
+}
+
+@media screen and (min-width: 480px) {
+    body {
+        background-color: lightblue;
+    }
+}
