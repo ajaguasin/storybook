@@ -10,10 +10,11 @@ body {
     margin: 0;    
     display: flex;
     flex-direction: column;
+    align-items: center;
 
 }
 
-h1,h2,h3,h4,p {
+h1,h2,h3,h4,p,footer {
     color: white;
 }
 
@@ -24,14 +25,13 @@ h1,h2,h3,h4,p {
     margin: 0 auto;
     order: 1;
     position: absolute;
-    bottom:4rem;
-    left: -6rem;
+
 }
 
 #menu-main-navigation {
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
+    /* align-items: flex-end; */
     list-style-type: none;
     padding: 0;
 
@@ -57,8 +57,15 @@ main {
     position: relative;
 }
 
+h3.home-content {
+
+}
+.home-content {
+    position: absolute;
+}
+
 @media screen and (min-width: 480px) {
     body {
-        background-color: lightblue;
+        background-color: black;
     }
 }
