@@ -7,7 +7,7 @@
 ?>
 <?php get_header(); ?>
 
-references page
+<p>references page</p> 
 
 
 <?php get_footer(); ?>

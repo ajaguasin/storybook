@@ -1,8 +1,26 @@
 /*
 Theme Name: anthony-aguasin
+Description: Storyboard is a theme to tell your travel adventures through an immersive experience
 Author: Anthony Aguasin
 Version: 1.0
 */
+
+@import url('https://fonts.googleapis.com/css?family=Lato:100i,400i|Open+Sans:300,400');
+@import url('https://fonts.googleapis.com/css?family=Allura');
+
+html {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
+#storyboard {
+    font-family: 'Allura', cursive;
+    letter-spacing: 1px;
+    font-size: 42pt;
+    border-bottom: 1px solid;
+    animation: zip 1s linear infinite;
+}
 body {
     background-color: seagreen;
     box-sizing: border-box;
@@ -10,32 +28,37 @@ body {
     margin: 0;    
     display: flex;
     flex-direction: column;
+    position: relative;
     align-items: center;
-
+    justify-content: space-around;
 }
 
 h1,h2,h3,h4,p,footer {
     color: white;
 }
 
+h1,h2,h3,h4 {
+    font-family: 'Lato', sans-serif;
+    font-weight: 100;
+}
+
 
 
 .menu-main-navigation-container {
-    width: 80%;
-    margin: 0 auto;
+    display: flex;
     order: 1;
     position: absolute;
+    left: 0;
+    z-index: 1;
 
 }
 
 #menu-main-navigation {
     display: flex;
-    flex-direction: column;
-    /* align-items: flex-end; */
+    flex-direction: row;
     list-style-type: none;
     padding: 0;
-
-    position: relative;
+    top: 0;
 }
 
 #menu-main-navigation li {
@@ -53,19 +76,60 @@ main {
     width: 100%;
 }
 
-.wp_custom_header {
-    position: relative;
+#wp_custom_header {
 }
 
-h3.home-content {
+#wp-custom-header-video {
+    object-fit: cover;
+    width: 100%;
+}
+
+a.home-content {
+    color: white;;
+    z-index: 1;
+    text-decoration: none;
+    border: 1px solid white;
+    border-radius: 10px;
+    padding: 1rem;
+    background-color: rgba(0, 0, 0, .2);
+}
+p.home-content {
+    top:5rem;
+    text-align: center;
 
 }
 .home-content {
     position: absolute;
 }
 
+footer {
+    position: fixed;
+    bottom: 0;
+}
+
+
 @media screen and (min-width: 480px) {
     body {
         background-color: black;
+    }
+
+    #menu-main-navigation {
+        flex-direction: column;
+        top: unset;
+
+    }
+}
+
+@keyframes zip {
+    from{
+        border-bottom-color: transparent;
+    }
+
+    50% {
+        border-bottom-color: white;
+    }
+
+    to {
+        border-bottom-color: transparent;
     }
 }
