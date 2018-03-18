@@ -5,6 +5,11 @@ html {
     font-family: 'Open Sans', sans-serif;
     font-weight: 300;
     letter-spacing: 1px;
+
+}
+
+html, a, p {
+    color: orange
 }
 
 body {
@@ -13,12 +18,16 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
+    margin: 0;
+    overflow-y: hidden;
+
 }
 
 .menu-main-navigation-container {
     position: absolute;
     top: 5%;
     width: 400px;
+    
     
 }
 
@@ -35,4 +44,59 @@ body {
 
 #custom-bg {
     height: 100vh;
+}
+
+#background-div {
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    z-index: -1;
+}
+
+.read-more {
+    opacity: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, .7);
+    transition: opacity .5s;
+    padding: 1rem;
+    z-index: 2;
+}
+
+.read-more p {
+    columns: 2;
+    letter-spacing: 1.1px;
+    line-height: 32px;
+}
+
+.post-contents {
+    align-items: center;
+    justify-content: space-around;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, .7);
+    padding: 1rem;
+    z-index: 2;
+
+}
+
+#excerpt {
+    display: inline;
+}
+
+#add-button {
+}
+
+.opacityToggle{
+    opacity: 0;
+    z-index: -1;
 }

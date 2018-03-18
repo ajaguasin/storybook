@@ -8,19 +8,18 @@
                 <?php 
                     if(!is_front_page()): 
                         the_title('<h3 class="home-content">','</h3>');
-                        if (is_home() && has_post_thumbnail( $post->ID ) ):
-                            $image = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), 'single-post-thumbnail' );
-                            echo "<div id='custom-bg' style='background-image: url(".$image[0]." )'></div>";
+                        if (is_home()  ):
                             echo "<p id='excerpt'>".get_the_excerpt(). "</p>";
                         endif;
                     endif; ?>
-                <?php echo "<div id='entry'>".get_the_content()."</div>"; ?>
+                <?php 
+                    global $contents;
+                    if(is_home()): $contents = get_the_content();
+                    else: echo "<div id='entry'>".get_the_content()."</div>"; 
+                    endif;
+                ?>
 
             <?php endwhile;
         endif;
 
-        // wp_reset_query();
-        if(is_home()): 
-            echo "<p>i am a page</p>";
-        endif;
     ?>
