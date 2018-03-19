@@ -47,25 +47,26 @@ h1,h2,h3,h4 {
 
 .menu-main-navigation-container {
     display: flex;
+    flex-direction: row;
     order: 1;
     position: absolute;
-    left: 0;
+    top: 5%;
     z-index: 1;
-
+    width: 400px;
 }
 
 #menu-main-navigation {
     display: flex;
-    flex-direction: row;
+    justify-content: space-around;
     list-style-type: none;
     padding: 0;
-    top: 0;
+    width: 100%;
+
 }
 
 #menu-main-navigation li {
-    display: flex;
-    padding: 1rem 0;
-    width: 100px;
+    /* display: flex;
+    padding: 1rem 0; */
 }
 #menu-main-navigation a {
     color: white;
@@ -117,11 +118,6 @@ footer {
         background-color: black;
     }
 
-    #menu-main-navigation {
-        flex-direction: column;
-        top: unset;
-
-    }
 }
 
 @keyframes zip {

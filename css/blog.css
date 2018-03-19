@@ -8,8 +8,13 @@ html {
 
 }
 
+.page-numbers {
+    font-size: 2em;
+    text-decoration: none;
+}
+
 html, a, p {
-    color: orange
+    color: orange;
 }
 
 body {
@@ -27,8 +32,6 @@ body {
     position: absolute;
     top: 5%;
     width: 400px;
-    
-    
 }
 
 .menu {
@@ -58,9 +61,10 @@ body {
 .read-more {
     opacity: 1;
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
     position: absolute;
     top: 0;
     height: 100%;
@@ -71,10 +75,11 @@ body {
     z-index: 2;
 }
 
-.read-more p {
-    columns: 2;
+.read-more > p, .read-more > div {
     letter-spacing: 1.1px;
     line-height: 32px;
+    max-width: 50ch;
+    overflow-y: auto;
 }
 
 .post-contents {
@@ -99,4 +104,8 @@ body {
 .opacityToggle{
     opacity: 0;
     z-index: -1;
+}
+
+h2.screen-reader-text {
+    display: none;
 }

@@ -5,9 +5,8 @@
  * 
  */
 ?>
-<?php get_header(); ?>
-
-documentation page
-
-
-<?php get_footer(); ?>
+<?php 
+    get_header();
+    get_template_part( 'template-parts/content', 'part' );
+    get_footer(); 
+?>

@@ -3,12 +3,12 @@
 function anthonyaguasin_styles_and_scripts() {
     // Link style.css
     if(is_front_page()):
-        wp_enqueue_style( 'main-stylesheet', get_template_directory_uri().'/style.css', array(), 4 );
+        wp_enqueue_style( 'main-stylesheet', get_template_directory_uri().'/style.css', array(), mt_rand() );
     endif;
 
     // Link blog.css
-    if(is_home()):
-        wp_enqueue_style( 'blog', get_template_directory_uri() . '/css/blog.css',array(),mt_rand());
+    if(is_home() || is_single()):
+        wp_enqueue_style( 'blog', get_template_directory_uri() . '/css/blog.css',array(), mt_rand());
     endif;
 
     // Loads jQuery
@@ -42,7 +42,7 @@ function anthonyaguasin_theme_setup() {
 add_action('init', 'anthonyaguasin_theme_setup');
 
 
-// remove_filter( 'the_content', 'wpautop' );
-// remove_filter( 'the_excerpt', 'wpautop' );
+remove_filter( 'the_content', 'wpautop' );
+remove_filter( 'the_excerpt', 'wpautop' );
 
 
