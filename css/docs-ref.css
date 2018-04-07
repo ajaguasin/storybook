@@ -1,0 +1,16 @@
+body {
+  margin: 0;
+}
+
+.wrapper {
+  width: 80%;
+  margin: auto;
+}
+
+h3 {
+  text-align: center;
+}
+
+p {
+  max-width: 75ch;
+}
