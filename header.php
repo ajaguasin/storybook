@@ -1,8 +1,8 @@
 <?php
 /**
- * 
+ *
  * header
- * 
+ *
  */
 ?>
 <!DOCTYPE html>
@@ -17,7 +17,7 @@
     <?php wp_head(); ?>
 </head>
 
-<?php 
+<?php
     if( is_front_page() ):
         $front_classes = array('front-class', 'my-class');
     else:
@@ -25,11 +25,4 @@
     endif;
 ?>
 
-<body
-    <?php 
-        body_class($front_classes); 
-
-    ?>
->
-
-
+<body <?php body_class($front_classes);?>>

@@ -1,13 +1,16 @@
-<?php 
+<?php
 /**
- * 
+ *
  * Template Name: References Page
- * 
+ *
  */
 ?>
-<?php get_header(); ?>
+<?php get_header();
+  echo "<div class='wrapper'>";
 
-<p>references page</p> 
+  wp_nav_menu(array('theme_location'=>'primary'));
 
-
-<?php get_footer(); ?>
+  get_template_part( 'template-parts/content', 'part' );
+  echo "</div>";
+  get_footer();
+?>

@@ -20,7 +20,7 @@ html {
     letter-spacing: 1px;
     font-size: 42pt;
     border-bottom: 1px solid;
-    animation: zip 1s linear infinite;
+    animation: zip 2s ease-in-out infinite;
 }
 body {
     background-color: seagreen;
@@ -53,7 +53,7 @@ h1,h2,h3,h4 {
     position: absolute;
     top: 5%;
     z-index: 1;
-    width: 400px;
+    width: 500px;
 }
 
 #menu-main-navigation {
@@ -97,6 +97,10 @@ main {
     background-color: rgba(0, 0, 0, .2);
     text-align: center;
     width: 100%;
+    animation: pulse 2s infinite;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: backwards;
+
 }
 p.home-content {
     text-align: center;
@@ -133,4 +137,11 @@ footer {
     to {
         border-bottom-color: transparent;
     }
+}
+
+@keyframes pulse {
+    0% {box-shadow: none;}
+    50% {box-shadow: 0 0 15px plum;}
+    100% {box-shadow: none;}
+
 }
